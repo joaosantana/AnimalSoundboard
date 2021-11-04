@@ -131,6 +131,9 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Elephant.wav" />
+    <Content Include="Assets\Monkey.wav" />
+    <Content Include="Assets\Owl.wav" />
     <Content Include="Assets\Chicken.wav" />
     <Content Include="Assets\Cow.wav" />
     <Content Include="Properties\Default.rd.xml" />
