@@ -7,17 +7,19 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
-    <Grid>
+    <Grid x:Name="RootGrid" Background="Lavender">
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
+            <RowDefinition Height="3*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
-        <Button Height="50" Width="150" HorizontalAlignment="Center" Click="Button_Click">Click Me!</Button>
-        <TextBlock x:Name="OurTextBlock" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" FontSize="18">What if there was more text here?</TextBlock>
+        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="80" Grid.ColumnSpan="2" FontWeight="ExtraBlack" Foreground="Indigo"> Animal Soundboard</TextBlock>
+        <Button Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="50" Click="Cow_Button_Click">🐄 Cow 🐄</Button>
+        <Button Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="50" Click="Chicken_Button_Click">🐔 Chicken 🐔</Button>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="45" Foreground="MediumPurple" FontWeight="ExtraBlack" Grid.ColumnSpan="2" Grid.Row="2">Click on a button to hear an animal noise!</TextBlock>
     </Grid>
 </Page>
