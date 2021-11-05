@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using System.Reflection;
 
 using Windows.Media.Core;
 using Windows.UI.Xaml;
@@ -22,6 +23,12 @@ namespace AnimalSoundboard
             this.Sounds = new ObservableCollection<SoundItem>();
             this.InitializeComponent();
             this.InitSounds();
+            this.VersionTextBlock.Text = String.Format("v. {0}", GitVersion());
+        }
+
+        private string GitVersion()
+        {
+            return Assembly.GetExecutingAssembly().GetName().Version.ToString();
         }
 
         private void InitSounds()
@@ -73,30 +80,6 @@ namespace AnimalSoundboard
         private void ToggleSwitch_Toggled(object sender, RoutedEventArgs e)
         {
             this.IsTextToSpeech = !this.IsTextToSpeech;
-        }
-
-        private void Monkey_Button_Click(object sender, RoutedEventArgs e)
-        {
-            SoundItem Monkey = new SoundItem("Monkey.wav", "🐒", "monke monke");
-            this.Sounds.Add(Monkey);
-        }
-
-        private async void Cow_Button_Click(object sender, RoutedEventArgs e)
-        {
-            MediaPlayerElement mediaPlayerElement = new MediaPlayerElement();
-            Windows.Storage.StorageFolder folder = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFolderAsync("Assets");
-            Windows.Storage.StorageFile file = await folder.GetFileAsync("Cow.wav");
-            mediaPlayerElement.Source = MediaSource.CreateFromStorageFile(file);
-            mediaPlayerElement.MediaPlayer.Play();
-        }
-
-        private async void Chicken_Button_Click(object sender, RoutedEventArgs e)
-        {
-            MediaPlayerElement mediaPlayerElement = new MediaPlayerElement();
-            Windows.Storage.StorageFolder folder = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFolderAsync("Assets");
-            Windows.Storage.StorageFile file = await folder.GetFileAsync("Chicken.wav");
-            mediaPlayerElement.Source = MediaSource.CreateFromStorageFile(file);
-            mediaPlayerElement.MediaPlayer.Play();
         }
     }
 }

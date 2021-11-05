@@ -7,15 +7,15 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="db0662a6-c01b-4d17-b579-8111b78e8688"
-    Publisher="CN=joaos"
+    Name="AnimalSoundboard"
+    Publisher="CN=João Antonio Santana"
     Version="1.0.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="db0662a6-c01b-4d17-b579-8111b78e8688" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>AnimalSoundboard</DisplayName>
-    <PublisherDisplayName>joaos</PublisherDisplayName>
+    <PublisherDisplayName>João Antonio Santana</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
@@ -32,12 +32,12 @@
       Executable="$targetnametoken$.exe"
       EntryPoint="AnimalSoundboard.App">
       <uap:VisualElements
-        DisplayName="AnimalSoundboard"
+        DisplayName="ms-resource:AppTitle"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="AnimalSoundboard"
+        Description="ms-resource:AppDescription"
         BackgroundColor="transparent">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
       </uap:VisualElements>
     </Application>
