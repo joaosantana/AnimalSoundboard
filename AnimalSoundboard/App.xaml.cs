@@ -39,11 +39,9 @@ namespace AnimalSoundboard
         /// <param name="e">Detalhes sobre a solicitação e o processo de inicialização.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
-            Frame rootFrame = Window.Current.Content as Frame;
-
             // Não repita a inicialização do aplicativo quando a Janela já tiver conteúdo,
             // apenas verifique se a janela está ativa
-            if (rootFrame == null)
+            if (!(Window.Current.Content is Frame rootFrame))
             {
                 // Crie um Quadro para atuar como o contexto de navegação e navegue para a primeira página
                 rootFrame = new Frame();
