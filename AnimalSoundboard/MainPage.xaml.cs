@@ -74,11 +74,5 @@ namespace AnimalSoundboard
         {
             this.IsTextToSpeech = !this.IsTextToSpeech;
         }
-
-        private void Monkey_Button_Click(object sender, RoutedEventArgs e)
-        {
-            SoundItem Monkey = new SoundItem("Monkey.wav", "🐒", "monke monke");
-            this.Sounds.Add(Monkey);
-        }
     }
 }

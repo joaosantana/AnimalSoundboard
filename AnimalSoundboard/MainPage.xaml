@@ -75,13 +75,5 @@
             HorizontalAlignment="Center"
             IsOn="False"
             Toggled="ToggleSwitch_Toggled" />
-        <Button
-            Grid.Row="2"
-            Grid.Column="2"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            Click="Monkey_Button_Click">
-            More monkey!
-        </Button>
     </Grid>
 </Page>
