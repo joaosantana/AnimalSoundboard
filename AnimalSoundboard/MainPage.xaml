@@ -36,24 +36,22 @@
         </Grid.ColumnDefinitions>
         <StackPanel Grid.ColumnSpan="3" Orientation="Vertical">
             <TextBlock
+                x:Uid="AppTitleTextBlock"
                 Grid.ColumnSpan="2"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 FontSize="80"
                 FontWeight="ExtraBlack"
-                Foreground="Black">
-                Animal Soundboard
-            </TextBlock>
+                Foreground="Black" />
             <TextBlock
+                x:Uid="AppSubtitleTextBlock"
                 Grid.Row="2"
                 Grid.ColumnSpan="2"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 FontSize="45"
                 FontWeight="ExtraBlack"
-                Foreground="DimGray">
-                Click on a button to hear an animal noise!
-            </TextBlock>
+                Foreground="DimGray" />
         </StackPanel>
         <GridView
             x:Name="SoundView"
@@ -72,11 +70,10 @@
             Grid.ColumnSpan="3"
             Background="WhiteSmoke" />
         <ToggleSwitch
+            x:Uid="TtsToggle"
             Grid.Row="2"
             HorizontalAlignment="Center"
             IsOn="False"
-            OffContent="Text to Speech Disabled"
-            OnContent="Text to Speech Enabled"
             Toggled="ToggleSwitch_Toggled" />
         <Button
             Grid.Row="2"
