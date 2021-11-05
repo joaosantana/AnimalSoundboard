@@ -129,7 +129,10 @@
   <data name="AppSubtitleTextBlock.Text" xml:space="preserve">
     <value>Clique num botão para ouvir o som de um animal</value>
   </data>
-  <data name="VersionTextBlock.Text" xml:space="preserve">
-    <value>v.</value>
+  <data name="AppTitle" xml:space="preserve">
+    <value>Sons de Animais</value>
+  </data>
+  <data name="AppDescription" xml:space="preserve">
+    <value>Um aplicativo educativo de sons de animais</value>
   </data>
 </root>
