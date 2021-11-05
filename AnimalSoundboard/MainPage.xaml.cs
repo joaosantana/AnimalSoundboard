@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using System.Reflection;
 
 using Windows.Media.Core;
 using Windows.UI.Xaml;
@@ -22,6 +23,12 @@ namespace AnimalSoundboard
             this.Sounds = new ObservableCollection<SoundItem>();
             this.InitializeComponent();
             this.InitSounds();
+            this.VersionTextBlock.Text = String.Format("v. {0}", GitVersion());
+        }
+
+        private string GitVersion()
+        {
+            return Assembly.GetExecutingAssembly().GetName().Version.ToString();
         }
 
         private void InitSounds()

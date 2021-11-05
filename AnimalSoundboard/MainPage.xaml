@@ -76,7 +76,7 @@
             IsOn="False"
             Toggled="ToggleSwitch_Toggled" />
         <TextBlock
-            x:Uid="VersionTextBlock"
+            x:Name="VersionTextBlock"
             Grid.Row="2"
             Grid.Column="2"
             HorizontalAlignment="Center"
