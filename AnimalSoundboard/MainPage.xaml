@@ -75,5 +75,11 @@
             HorizontalAlignment="Center"
             IsOn="False"
             Toggled="ToggleSwitch_Toggled" />
+        <TextBlock
+            x:Uid="VersionTextBlock"
+            Grid.Row="2"
+            Grid.Column="2"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center" />
     </Grid>
 </Page>

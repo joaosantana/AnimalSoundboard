@@ -129,4 +129,7 @@
   <data name="AppSubtitleTextBlock.Text" xml:space="preserve">
     <value>Clique num botão para ouvir o som de um animal</value>
   </data>
+  <data name="VersionTextBlock.Text" xml:space="preserve">
+    <value>v.</value>
+  </data>
 </root>
